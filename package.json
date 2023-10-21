@@ -1,5 +1,9 @@
 {
   "devDependencies": {
-    "cypress": "^13.3.2"
+    "cypress": "^13.3.2",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "tsc": "^2.0.4"
   }
 }

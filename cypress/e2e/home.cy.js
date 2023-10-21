@@ -12,12 +12,15 @@ describe("home page", () => {
       cy.getByData("header-inner").should("exist").contains("Contact").click();
       cy.location("pathname").should("eq", "/contact");
       cy.getByData("header-inner").eq(0).click().wait(2000);
-      //   cy.location("pathname").should("eq", "/");
     });
   });
 
   context("Main content", () => {
     it("Activities are visible", () => {
+      cy.get("#block-800de0b4b8ff3975f551")
+        .find("h1")
+        .should("be.visible")
+        .contains("Capturing greatness");
       // Scroll to a specific element
       cy.scrollTo(0, 400).wait(2000);
 
